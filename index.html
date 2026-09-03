@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>3D Printing Legislation Tracker</title>
+    <meta name="description" content="Community-maintained tracker of 3D printer and 3D-printed firearm legislation — California AB 2047, New York, Washington, and beyond. What each law actually says and what it means for hobbyists.">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>§</text></svg>">
+    <link rel="alternate" type="application/rss+xml" title="3D Printing Legislation Tracker updates" href="feed.xml">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+
+    <nav class="header-nav">
+        <a href="#tracker" class="logo">3D Printing Legislation Tracker</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+            <svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+                <path class="sun-path"
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                </path>
+            </svg>
+        </button>
+    </nav>
+
+    <main class="content-section">
+
+        <header class="page-head">
+            <h1 class="page-title">Printer laws,<br>read straight.</h1>
+            <p class="page-subtitle">Every law and bill aimed at 3D printers and 3D-printed firearms — what each one actually says, where it stands today, and what it means for the people who print. Maintained by the 3D Printing Weekly meetup.</p>
+            <div class="meta-line">
+                <span id="updated-line">Updated —</span>
+                <span>Community tracker · not legal advice</span>
+            </div>
+        </header>
+
+        <div class="tabs" role="tablist">
+            <button class="tab-btn active" data-tab="tracker" role="tab">Tracker</button>
+            <button class="tab-btn" data-tab="blocking-tech" role="tab">Blocking Technology</button>
+            <button class="tab-btn" data-tab="prop-problem" role="tab">The Prop Problem</button>
+            <button class="tab-btn" data-tab="take-action" role="tab">Take Action</button>
+        </div>
+
+        <!-- ── TRACKER ─────────────────────────────── -->
+        <section id="panel-tracker" class="tab-panel active">
+
+            <div class="situation-panel glass">
+                <div class="panel-title">What does this mean for me?</div>
+                <div class="panel-desc">Tap everything that describes you. Every card below will flag the rows that apply to your situation. Saved on your device only.</div>
+                <div class="situation-options" id="situation-options"></div>
+            </div>
+
+            <div class="filters" id="region-filters">
+                <span class="filter-label">Where</span>
+            </div>
+            <div class="filters" id="status-filters">
+                <span class="filter-label">Status</span>
+            </div>
+
+            <div class="cards" id="bill-cards"></div>
+
+            <div class="divider"></div>
+            <div class="section-label">Follow the updates</div>
+            <div class="action-panel glass">
+                <p class="panel-desc">Laws move; this page moves with them. Three ways to hear about it without checking back:</p>
+                <a class="link-row" href="feed.xml"><span>RSS feed — works with any feed reader</span><svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></a>
+                <a class="link-row" href="https://github.com/MaxSikorski/3d-printing-regulation" target="_blank" rel="noopener"><span>Watch the GitHub repo — notified on every change</span><svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+                <a class="link-row" href="https://discord.gg/pnFyeAZJsk" target="_blank" rel="noopener"><span>Our Discord — updates land in the legislation channel</span><svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+            </div>
+
+            <div class="section-label" style="margin-top: 40px;">Update log</div>
+            <div class="updates" id="update-log"></div>
+
+        </section>
+
+        <!-- ── BLOCKING TECH ───────────────────────── -->
+        <section id="panel-blocking-tech" class="tab-panel">
+            <div id="blocking-tech-content"></div>
+        </section>
+
+        <!-- ── PROP PROBLEM ────────────────────────── -->
+        <section id="panel-prop-problem" class="tab-panel">
+            <div id="prop-problem-content"></div>
+        </section>
+
+        <!-- ── TAKE ACTION ─────────────────────────── -->
+        <section id="panel-take-action" class="tab-panel">
+
+            <div class="action-panel glass">
+                <h3>Write to the people who vote on this</h3>
+                <p class="panel-desc">Pick your situation and we'll draft a respectful, factual letter you can edit and send from your own email. Nothing is sent from this page and nothing you type leaves your device.</p>
+
+                <div class="form-row">
+                    <label for="act-target">Who are you writing to?</label>
+                    <select id="act-target">
+                        <option value="newsom">Governor Newsom — AB 2047 is on his desk NOW</option>
+                        <option value="state">My state legislators</option>
+                        <option value="congress">My member of Congress</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="act-stance">Your position</label>
+                    <select id="act-stance">
+                        <option value="oppose">I oppose printer blocking-technology mandates</option>
+                        <option value="concerns">I have concerns — open source, offline printers, false positives</option>
+                        <option value="questions">I'm a constituent with questions</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="act-name">Your name (optional — used in the sign-off)</label>
+                    <input type="text" id="act-name" placeholder="Your name" autocomplete="off">
+                </div>
+
+                <div class="form-row">
+                    <label for="act-letter">Your letter — edit anything</label>
+                    <textarea id="act-letter" spellcheck="false"></textarea>
+                </div>
+
+                <div class="btn-row">
+                    <button class="btn primary-btn" id="act-copy">Copy letter</button>
+                    <a class="btn secondary-btn" id="act-mailto" href="#" target="_blank" rel="noopener">Open in your email app</a>
+                </div>
+            </div>
+
+            <div class="action-panel glass">
+                <h3>Find the right inbox</h3>
+                <p class="panel-desc">Official lookups — enter your address, get your actual representatives.</p>
+                <div id="action-links"></div>
+            </div>
+
+            <div class="action-panel glass">
+                <h3>People already fighting this fight</h3>
+                <p class="panel-desc">If you'd rather amplify than write, start here.</p>
+                <div id="ally-links"></div>
+            </div>
+
+        </section>
+
+        <div class="disclaimer glass">
+            This tracker is maintained by the <a href="https://maxsikorski.github.io/3d-printing-weekly-news" style="color: inherit;">3D Printing Weekly meetup</a> community as a plain-language reading of public legislation. It is not legal advice, and laws change faster than any tracker — every card shows the date we last verified it, and every card links its primary sources so you can check us. Spotted a bill we missed or a status that moved? Bring it to the Thursday meetup, the <a href="https://discord.gg/pnFyeAZJsk" style="color: inherit;">Discord</a>, or open an issue on <a href="https://github.com/MaxSikorski/3d-printing-regulation" style="color: inherit;">GitHub</a>.
+        </div>
+
+        <footer class="footer">3D Printing Weekly · a Sikorski Design site</footer>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

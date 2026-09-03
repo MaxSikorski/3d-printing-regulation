@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+    <title>3D Printing Legislation Tracker</title>
+    <link>https://maxsikorski.github.io/3d-printing-regulation/</link>
+    <atom:link href="https://maxsikorski.github.io/3d-printing-regulation/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Updates from the 3D Printing Weekly meetup's community tracker of 3D printer and 3D-printed firearm legislation.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Sep 2026 12:00:00 -0400</lastBuildDate>
+
+    <item>
+        <title>New: the Prop Problem tab, and what ASTM actually is</title>
+        <link>https://maxsikorski.github.io/3d-printing-regulation/#prop-problem</link>
+        <guid isPermaLink="false">3dpl-2026-09-03-b</guid>
+        <pubDate>Thu, 03 Sep 2026 12:00:00 -0400</pubDate>
+        <description>The Prop Problem now has its own tab — why shape-detection algorithms and Star Wars prop blasters can't coexist, with examples from our own members' testing. The Blocking Technology tab gains a plain-language explainer of ASTM International, the standards body California's AB 2047 hangs on.</description>
+    </item>
+
+    <item>
+        <title>Tracker launched — AB 2047 is on Newsom's desk</title>
+        <link>https://maxsikorski.github.io/3d-printing-regulation/</link>
+        <guid isPermaLink="false">3dpl-2026-09-03-a</guid>
+        <pubDate>Thu, 03 Sep 2026 10:00:00 -0400</pubDate>
+        <description>The tracker goes live with 12 cards: California AB 2047 (passed the legislature Aug 31, 60-18 concurrence; Governor Newsom signs or vetoes by end of September), New York's signed blocking-tech law, Washington's HB 2320 (in force) and stalled HB 2321, New Jersey's file-possession law, Colorado HB26-1144, the serialization wave, the US federal baseline, and the UK, Australia, Canada, and EU.</description>
+    </item>
+
+</channel>
+</rss>
