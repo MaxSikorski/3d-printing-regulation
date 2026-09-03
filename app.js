@@ -46,6 +46,13 @@
     const initial = location.hash.replace("#", "");
     if (["tracker", "blocking-tech", "prop-problem", "take-action"].includes(initial)) showTab(initial);
 
+    document.querySelector(".logo").addEventListener("click", (e) => {
+        e.preventDefault();
+        history.replaceState(null, "", "#tracker");
+        showTab("tracker");
+        window.scrollTo({ top: 0 });
+    });
+
     // ── Helpers ──────────────────────────────────────────────────
     const el = (tag, cls, html) => {
         const n = document.createElement(tag);
