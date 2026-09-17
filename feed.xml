@@ -6,7 +6,15 @@
     <atom:link href="https://maxsikorski.github.io/3d-printing-regulation/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Updates from the 3D Printing Weekly meetup's community tracker of 3D printer and 3D-printed firearm legislation.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Sep 2026 12:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 12:00:00 -0400</lastBuildDate>
+
+    <item>
+        <title>AB 2047 presented to Governor Newsom — decision by Sep 30</title>
+        <link>https://maxsikorski.github.io/3d-printing-regulation/#ca-ab2047</link>
+        <guid isPermaLink="false">3dpl-2026-09-17-a</guid>
+        <pubDate>Thu, 17 Sep 2026 12:00:00 -0400</pubDate>
+        <description>AB 2047 was formally enrolled and presented to Governor Newsom on Sep 14 at 1:30 p.m. He must act by Sep 30: sign, veto, or the bill becomes law without his signature — California has no pocket veto. The card's timeline, details, and verification date are updated.</description>
+    </item>
 
     <item>
         <title>New: the Prop Problem tab, and what ASTM actually is</title>

@@ -3,9 +3,10 @@
 // and add a line to `updateLog`. Dates are ISO (YYYY-MM-DD).
 
 window.TRACKER_DATA = {
-    updated: "2026-09-03",
+    updated: "2026-09-17",
 
     updateLog: [
+        { date: "2026-09-17", text: "AB 2047 was formally enrolled and presented to Governor Newsom Sep 14 at 1:30 p.m. The decision clock is running: sign, veto, or it becomes law without his signature by Sep 30 — California has no pocket veto." },
         { date: "2026-09-03", text: "The Prop Problem got its own tab — why shape detection and prop blasters can't coexist. Also new on the Blocking Technology tab: what ASTM actually is." },
         { date: "2026-09-03", text: "Tracker launched. CA AB 2047 passed the legislature Aug 31 (60–18 concurrence) and is on Governor Newsom's desk — sign or veto by end of September." }
     ],
@@ -34,12 +35,14 @@ window.TRACKER_DATA = {
                 { label: "Passed Assembly", date: "May 2026", done: true },
                 { label: "Amended (gutted)", date: "Aug 17, 2026", done: true },
                 { label: "Passed both chambers", date: "Aug 31, 2026", done: true },
-                { label: "Governor", date: "by Sep 30, 2026", done: false },
+                { label: "Presented to Governor", date: "Sep 14, 2026", done: true },
+                { label: "Signed or vetoed", date: "by Sep 30, 2026", done: false },
                 { label: "Operative", date: "~2030 earliest, if ever", done: false }
             ],
             summary: "The bill our meetup has tracked all summer. As passed, it makes it unlawful to sell, offer, or transfer for consideration a 3D printer in California without “firearm blocking technology” — hardware or firmware that evaluates print files and refuses firearms, illegal parts, and machine-gun conversion devices. The catch: none of it operates unless ASTM International publishes a blocking-tech standard first.",
             details: [
-                "Aug 31, 2026: Assembly concurred in Senate amendments 60–18 — the final legislative vote. Now with Governor Newsom.",
+                "Sep 14, 2026: enrolled and presented to Governor Newsom at 1:30 p.m. He must act by Sep 30 — sign, veto, or the bill becomes law without his signature (no pocket veto in California).",
+                "Aug 31, 2026: Assembly concurred in Senate amendments 60–18 — the final legislative vote.",
                 "The version that passed is the narrowed “ASTM off-ramp” bill: the Senate stripped the DOJ-standards → attestation → approved-printer-list enforcement chain.",
                 "Timeline if signed: from Jul 1, 2027 the CA DOJ checks quarterly whether ASTM has published a standard. If one appears: 24 months for state regulations, then sale restrictions one year later — roughly 2030 at the earliest.",
                 "Self-sunset: if ASTM publishes nothing by Jul 1, 2029, the DOJ's obligation ends. No ASTM standard exists today and ASTM is under no obligation to write one.",
@@ -63,7 +66,7 @@ window.TRACKER_DATA = {
                 { label: "EFF: The Dangers of California's Legislation to Censor 3D Printing", url: "https://www.eff.org/deeplinks/2026/04/dangers-californias-legislation-censor-3d-printing" },
                 { label: "Joel Telling's action hub", url: "https://www.the3dprintingnerd.com/ab2047" }
             ],
-            verified: "2026-09-03"
+            verified: "2026-09-17"
         },
         {
             id: "ny-s9005c",
