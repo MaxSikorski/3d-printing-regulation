@@ -6,7 +6,15 @@
     <atom:link href="https://maxsikorski.github.io/3d-printing-regulation/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Updates from the 3D Printing Weekly meetup's community tracker of 3D printer and 3D-printed firearm legislation.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Sep 2026 12:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 12:00:00 -0400</lastBuildDate>
+
+    <item>
+        <title>AB 2047 is law: signed Sep 26, dormant until ASTM acts</title>
+        <link>https://maxsikorski.github.io/3d-printing-regulation/#ca-ab2047</link>
+        <guid isPermaLink="false">3dpl-2026-10-01-a</guid>
+        <pubDate>Thu, 01 Oct 2026 12:00:00 -0400</pubDate>
+        <description>Governor Newsom signed AB 2047 on Sep 26 (Chapter 461, Statutes of 2026). It takes effect Jan 1, 2027, but the printer sale ban only starts if ASTM International publishes a blocking-tech standard and the CA DOJ writes rules: mid-2028 at the very earliest, realistically 2030 or later, possibly never. The card now covers owners, used sales, gifts, self-built machines and businesses. Take Action has a new "Get in before the standard exists" panel, and the letter generator now writes to the CA DOJ.</description>
+    </item>
 
     <item>
         <title>AB 2047 presented to Governor Newsom — decision by Sep 30</title>

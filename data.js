@@ -3,9 +3,10 @@
 // and add a line to `updateLog`. Dates are ISO (YYYY-MM-DD).
 
 window.TRACKER_DATA = {
-    updated: "2026-09-17",
+    updated: "2026-10-01",
 
     updateLog: [
+        { date: "2026-10-01", text: "AB 2047 is law: Governor Newsom signed it Sep 26 (Chapter 461, Statutes of 2026). It takes effect Jan 1, 2027 but stays dormant until ASTM publishes a blocking-tech standard. The card now covers what that means for owners, used sales, gifts, self-built machines and businesses, and Take Action has a new “Get in before the standard exists” panel." },
         { date: "2026-09-17", text: "AB 2047 was formally enrolled and presented to Governor Newsom Sep 14 at 1:30 p.m. The decision clock is running: sign, veto, or it becomes law without his signature by Sep 30 — California has no pocket veto." },
         { date: "2026-09-03", text: "The Prop Problem got its own tab — why shape detection and prop blasters can't coexist. Also new on the Blocking Technology tab: what ASTM actually is." },
         { date: "2026-09-03", text: "Tracker launched. CA AB 2047 passed the legislature Aug 31 (60–18 concurrence) and is on Governor Newsom's desk — sign or veto by end of September." }
@@ -25,48 +26,54 @@ window.TRACKER_DATA = {
             id: "ca-ab2047",
             region: "us",
             place: "California",
-            billNo: "AB 2047",
+            billNo: "AB 2047 (Chapter 461)",
             name: "Firearm Printing Prevention Act",
-            status: "desk",
-            statusLabel: "On the Governor's desk",
-            deadline: { date: "2026-09-30", label: "Newsom signs or vetoes by" },
+            status: "law",
+            statusLabel: "Signed Sep 26, 2026 — dormant until ASTM acts",
+            deadline: { date: "2027-07-01", label: "CA DOJ starts quarterly checks for an ASTM standard on" },
             steps: [
                 { label: "Introduced", date: "2025", done: true },
                 { label: "Passed Assembly", date: "May 2026", done: true },
                 { label: "Amended (gutted)", date: "Aug 17, 2026", done: true },
                 { label: "Passed both chambers", date: "Aug 31, 2026", done: true },
-                { label: "Presented to Governor", date: "Sep 14, 2026", done: true },
-                { label: "Signed or vetoed", date: "by Sep 30, 2026", done: false },
-                { label: "Operative", date: "~2030 earliest, if ever", done: false }
+                { label: "Signed (Ch. 461)", date: "Sep 26, 2026", done: true },
+                { label: "Takes effect", date: "Jan 1, 2027", done: false },
+                { label: "DOJ checks for ASTM standard", date: "quarterly from Jul 1, 2027", done: false },
+                { label: "Off-ramp if no standard", date: "Jul 1, 2029", done: false },
+                { label: "Sale ban", date: "2028 at the very earliest; realistically 2030+, possibly never", done: false }
             ],
-            summary: "The bill our meetup has tracked all summer. As passed, it makes it unlawful to sell, offer, or transfer for consideration a 3D printer in California without “firearm blocking technology” — hardware or firmware that evaluates print files and refuses firearms, illegal parts, and machine-gun conversion devices. The catch: none of it operates unless ASTM International publishes a blocking-tech standard first.",
+            summary: "Signed into law September 26, 2026. Once it operates, it is unlawful to sell, offer for sale, or transfer for consideration a 3D printer in California without “firearm blocking technology”: hardware or firmware that won't start a print until a detection algorithm has cleared the file. The catch: none of it operates unless ASTM International publishes a blocking-tech standard first, and none exists.",
             details: [
-                "Sep 14, 2026: enrolled and presented to Governor Newsom at 1:30 p.m. He must act by Sep 30 — sign, veto, or the bill becomes law without his signature (no pocket veto in California).",
-                "Aug 31, 2026: Assembly concurred in Senate amendments 60–18 — the final legislative vote.",
-                "The version that passed is the narrowed “ASTM off-ramp” bill: the Senate stripped the DOJ-standards → attestation → approved-printer-list enforcement chain.",
-                "Timeline if signed: from Jul 1, 2027 the CA DOJ checks quarterly whether ASTM has published a standard. If one appears: 24 months for state regulations, then sale restrictions one year later — roughly 2030 at the earliest.",
-                "Self-sunset: if ASTM publishes nothing by Jul 1, 2029, the DOJ's obligation ends. No ASTM standard exists today and ASTM is under no obligation to write one.",
-                "Exemptions include printers used exclusively for entertainment-industry props and developers testing blocking technology.",
+                "Sep 26, 2026: approved by Governor Newsom and chaptered (Chapter 461, Statutes of 2026), one of a batch of gun bills signed that day. It lives in the Civil Code (§§3273.631–3273.634), not the Penal Code.",
+                "Timeline: in effect Jan 1, 2027. From Jul 1, 2027 the CA DOJ checks quarterly whether ASTM has published a standard. If one appears and shows the tech is feasible: DOJ guidance or regulations within 24 months, written “in consultation with stakeholders” under the Administrative Procedure Act, then the sale ban one year later. Earliest possible bite: mid-2028. Realistically 2030 or later.",
+                "Off-ramp, not a sunset: if ASTM has published nothing as of Jul 1, 2029, the DOJ is no longer required to keep checking. The law itself stays on the books. No ASTM standard exists today, and no ASTM work item has been opened.",
+                "Cut before passage: criminal penalties, the misdemeanor for disabling blocking tech, civil fines (earlier drafts: up to $25,000 per violation), the public approved-printer list, and a fixed ban date. The industrial-printer exemption was also removed, so the scope got wider.",
+                "Still possible: the DOJ MAY require manufacturer self-attestation per make and model (§3273.633(b)(6)), may add its own definitions and requirements beyond ASTM's (b)(4), and may borrow another state's standards (b)(5), meaning New York's.",
+                "“3D printer” is borrowed from Civil Code §3273.60(d): any device that builds an object by fusing layered cross sections “of a resin or similar material.” Filament and resin machines alike; no hobby, price or open-source exemption.",
+                "Enforcement: the title has no penalty section of its own. Our reading: a violation could still be pursued as an “unlawful” business practice under the Unfair Competition Law (Bus. & Prof. Code §17200). That's a risk for sellers, not owners.",
+                "Exemptions: printers used exclusively for making props in the entertainment industry; distributing firearm files solely to develop and test blocking tech; and any further exceptions the DOJ adopts by regulation (§3273.634(b)).",
                 "Sponsor: Assemblymember Rebecca Bauer-Kahan. Opposition: Josef Průša, VORON Design, Make:, Joel Telling, EFF."
             ],
             impact: {
-                newPrinters: { level: "watch", text: "No change today. If signed AND ASTM publishes a standard, new printers sold in CA would eventually (roughly 2030+) need blocking tech. Nothing before then." },
-                usedSales: { level: "caution", text: "“Transfer for consideration” is not limited to manufacturers — once operative, a compliant-only rule could reach used-printer sales inside California. Our reading, not settled law." },
-                selfBuilt: { level: "watch", text: "The mandate attaches to the sale of a 3D printer. Buying boards, steppers, and extrusions to build your own machine likely never passes through a regulated printer sale — but watch how DOJ regulations define “3D printer.”" },
-                offline: { level: "none", text: "No possession or use restriction anywhere in the bill. Printers you own, online or offline, are untouched." },
-                business: { level: "watch", text: "Printing services aren't regulated — the sale of printers is. A farm buying new machines in CA after the operative date would be buying compliant ones." }
+                newPrinters: { level: "watch", text: "No change today. Only if ASTM publishes a standard and the DOJ writes rules would new printers sold in CA need blocking tech, mid-2028 at the very earliest and realistically 2030+. Watch whether out-of-state sellers shipping into CA are covered; the text doesn't say." },
+                usedSales: { level: "caution", text: "The ban covers anyone who sells or transfers for consideration, not just manufacturers, and the text has no grandfather clause. Once operative, selling a non-compliant used printer inside CA would be unlawful as written. A free gift isn't “for consideration,” so gifts, hand-me-downs, donations and inheritance aren't covered. Trades probably are. Our reading, not settled law." },
+                selfBuilt: { level: "watch", text: "Buying boards, steppers and extrusions isn't buying “a 3D printer.” Complete kits are the gray zone, depending on how DOJ rules define it. The final law has no anti-tampering clause: changing the firmware on a machine you own breaks nothing in this text. Reselling a finished build inside CA after the ban would fall under the used-sale rule." },
+                offline: { level: "none", text: "No possession or use restriction anywhere in the law. No retrofit, no registration. Printers you own, online or offline, are untouched." },
+                business: { level: "watch", text: "What you print and sell isn't regulated; the sale of printers is. After the ban starts, new CA fleet purchases must be compliant, and selling off old machines in CA hits the used-sale rule. Film/TV prop shops may qualify for the props exemption, but only for printers used exclusively for props." }
             },
             actions: [
-                { label: "Tell Governor Newsom your position (official contact form)", url: "https://www.gov.ca.gov/contact/" },
-                { label: "Live status — CalMatters tracker", url: "https://calmatters.digitaldemocracy.org/bills/ca_202520260ab2047" }
+                { label: "Get in before the standard exists (Take Action tab)", url: "https://maxsikorski.github.io/3d-printing-regulation/#take-action" },
+                { label: "Read the law as signed (leginfo)", url: "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2047" }
             ],
             sources: [
-                { label: "Full bill text (leginfo)", url: "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2047" },
-                { label: "CalMatters bill tracker", url: "https://calmatters.digitaldemocracy.org/bills/ca_202520260ab2047" },
+                { label: "Chaptered text (leginfo)", url: "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2047" },
+                { label: "Bill status: Approved by Governor 09/26/26, Ch. 461", url: "https://leginfo.legislature.ca.gov/faces/billStatusClient.xhtml?bill_id=202520260AB2047" },
+                { label: "3DPrinting.com: AB 2047 explained (Sep 28)", url: "https://3dprinting.com/industry/california-ab-2047-3d-printer-law-explained/" },
+                { label: "3DPrint.com: California signs the bill (Sep 29)", url: "https://3dprint.com/333850/california-signs-3d-printer-gun-blocking-bill-into-law/" },
                 { label: "EFF: The Dangers of California's Legislation to Censor 3D Printing", url: "https://www.eff.org/deeplinks/2026/04/dangers-californias-legislation-censor-3d-printing" },
                 { label: "Joel Telling's action hub", url: "https://www.the3dprintingnerd.com/ab2047" }
             ],
-            verified: "2026-09-17"
+            verified: "2026-10-01"
         },
         {
             id: "ny-s9005c",
@@ -163,7 +170,7 @@ window.TRACKER_DATA = {
             details: [
                 "Would have applied to all 3D printers sold in Washington — the hardware-mandate model.",
                 "Criticism mirrored CA/NY: the detection technology doesn't meaningfully exist, and false positives hit legitimate prints (Adafruit: “bad for STEM, bad for business, bad for open source”).",
-                "Watch for reintroduction in the 2027 session, especially if Newsom signs AB 2047."
+                "Watch for reintroduction in the 2027 session. Newsom signed California's AB 2047 on Sep 26, 2026, which gives backers a template."
             ],
             impact: {
                 newPrinters: { level: "none", text: "Stalled — no effect unless revived." },
@@ -458,7 +465,7 @@ window.TRACKER_DATA = {
     ],
 
     blockingTech: {
-        intro: "Three states now name “firearm blocking technology” or “blueprint detection algorithms” in law — California (if signed), New York, and Washington's stalled HB 2321. None of them define how it should work, because the honest answer is: nothing deployed today does what the laws describe. Here is what actually exists, every approach on the table, and where each one breaks.",
+        intro: "Three states now name “firearm blocking technology” or “blueprint detection algorithms” in law — California (signed Sep 26, 2026), New York, and Washington's stalled HB 2321. None of them define how it should work, because the honest answer is: nothing deployed today does what the laws describe. Here is what actually exists, every approach on the table, and where each one breaks.",
         products: [
             {
                 name: "Create it REAL — firmware detection",
@@ -504,7 +511,7 @@ window.TRACKER_DATA = {
             paras: [
                 "California's whole law hangs on four letters, so it's worth knowing what they mean. ASTM International — it started in 1898 as the American Society for Testing and Materials — is one of the world's largest voluntary standards bodies. It is not a government agency. Nobody elected it, and it can't compel anyone to do anything.",
                 "What it does is build technical consensus. Engineers, companies, academics, and regulators sit on committees and vote standards into existence — more than 12,000 of them so far, covering the steel in bridges, the plastic in toys, and the flammability of your mattress. It even has a committee dedicated to 3D printing: F42, which writes the standards for additive manufacturing materials and processes.",
-                "Two things follow from how ASTM works. Standards take years, because committee consensus is slow by design. And ASTM only writes a standard when its members want one — it takes requests, not orders. AB 2047 handed the feasibility question to a body that answers to industry consensus, has never shown interest in a firearm-blocking standard, and is free to ignore the assignment forever. The bill's 2029 sunset clause reads like the drafters knew it."
+                "Two things follow from how ASTM works. Standards take years, because committee consensus is slow by design. And ASTM only writes a standard when its members want one — it takes requests, not orders. AB 2047 handed the feasibility question to a body that answers to industry consensus, has never shown interest in a firearm-blocking standard, and is free to ignore the assignment forever. The law's July 2029 off-ramp reads like the drafters knew it."
             ]
         },
         propProblem: {
@@ -514,17 +521,18 @@ window.TRACKER_DATA = {
                 "Start with the awkward fact: many famous movie blasters ARE real firearms wearing greebles. Han Solo's DL-44 is a Mauser C96 with a scope and a flash hider. The stormtrooper E-11 is a Sterling submachine gun. Boba Fett's EE-3 is a Webley flare gun. A detector that flags anything C96-shaped cannot tell your screen-accurate prop from the real thing, because at the silhouette level there is no difference to tell.",
                 "And it doesn't stop at props. Members of our own meetup have run everyday part files against AI shape classifiers, and the results match what the industry testified: the false flags are endless. A replacement trigger handle for a garden hose sprayer reads as a trigger. A hollow cylinder — which describes half of all functional prints — reads as a barrel. Springs, sears, tubes, grips: ordinary mechanical geometry keeps tripping the alarm, because guns are made of ordinary mechanical geometry.",
                 "There's one distinction working in our favor. A detector keyed on FUNCTION — fire-control cavities, receiver internals, the parts that make a gun a gun — would pass a solid decorative prop, since props have no working internals. A detector keyed on SHAPE flags everything on your cosplay shelf. Which kind the law means is exactly what no standard has defined, and none of these bills includes an appeal button for a wrongly blocked print.",
-                "One more time for clarity: printing a prop is not a crime under any law on this tracker, and nothing pending would change that. The prop problem is a censorship-by-algorithm problem — your lawful print refused by a machine you own, with nobody to complain to. If you ever write to a lawmaker about this issue, the prop on your shelf is the most persuasive exhibit you have."
+                "One more time for clarity: printing a prop is not a crime under any law on this tracker, and nothing pending would change that. The prop problem is a censorship-by-algorithm problem — your lawful print refused by a machine you own, with nobody to complain to. If you ever write to a lawmaker about this issue, the prop on your shelf is the most persuasive exhibit you have.",
+                "Now that AB 2047 is law, its props exemption is our best argument. It covers printers used “exclusively” for making props in the “entertainment industry.” By writing it, California conceded both that gun-shaped props are legitimate and that a detector can't tell them from guns. That exemption is narrow: a hobbyist's cosplay printer almost certainly doesn't qualify, so please don't claim it. But the law lets the DOJ adopt additional exceptions, and our ask is simple: extend it to cosplay, costuming, theater, schools, airsoft and replica builders. The Take Action tab shows how to get in early."
             ]
         },
         collision: [
             "Open firmware: every detection mandate implicitly requires locked firmware to be enforceable — and locked firmware is the end of Klipper/Marlin on compliant machines. The block and the freedom to modify cannot both hold.",
             "Offline printers: our machines sit in garages and basements without Wi-Fi. Any screening must therefore run entirely on-device with a frozen database — stale the day it ships — or the law quietly assumes connectivity that doesn't exist.",
-            "Legitimate gun-shaped printing: cosplay props, airsoft, replicas, film/theater work. California's bill even carves out entertainment-industry props — an admission that the detector can't tell a prop from a weapon.",
+            "Legitimate gun-shaped printing: cosplay props, airsoft, replicas, film/theater work. California's law even carves out entertainment-industry props — an admission that the detector can't tell a prop from a weapon.",
             "The installed base: no mandate touches the millions of printers already sold. A determined bad actor uses an old machine; the compliance cost lands on future lawful buyers."
         ],
         standards: [
-            "ASTM International (California's chosen body): no firearm-blocking standard exists, none is announced, and ASTM is under no obligation to write one. AB 2047 sunsets itself if nothing appears by July 1, 2029.",
+            "ASTM International (California's chosen body): no firearm-blocking standard exists, none is announced, and ASTM is under no obligation to write one. If nothing appears by July 1, 2029, AB 2047's off-ramp lets the DOJ stop checking (the law itself stays on the books).",
             "New York's expert working group: established by the May 2026 law; it can shelve the state's mandate entirely if it finds the technology infeasible.",
             "Watch both — an ASTM standard appearing (or the NY group blessing an approach) is the single event that would turn these laws from conditional to real."
         ]

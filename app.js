@@ -255,7 +255,7 @@
 
     // ── Take Action: letter generator ────────────────────────────
     const TARGET_META = {
-        newsom: { greeting: "Dear Governor Newsom,", subject: "AB 2047 — a constituent's perspective" },
+        cadoj: { greeting: "Dear Attorney General,", subject: "AB 2047 implementation — a 3D printing hobbyist's perspective" },
         state: { greeting: "Dear Legislator,", subject: "3D printer legislation — a constituent's perspective" },
         congress: { greeting: "Dear Representative,", subject: "3D printing legislation — a constituent's perspective" }
     };
@@ -263,17 +263,17 @@
     const PARA = {
         who: "I am a 3D printing hobbyist and a member of a weekly 3D printing community group of roughly 550 members. We print cosplay props, replacement parts, educational models, and open-source hardware projects.",
         oppose: {
-            newsom: "I am writing to respectfully ask you to veto AB 2047. The bill mandates “firearm blocking technology” that does not meaningfully exist: no ASTM standard has been published or announced, and the bill's own text concedes this by sunsetting the mandate if no standard appears by July 2029. What the mandate would eventually do is burden lawful California buyers with locked-down machines while leaving the millions of printers already in circulation untouched.",
+            cadoj: "I am writing about AB 2047 (Chapter 461, Statutes of 2026). I opposed the bill, and I ask the Department to read its mandate narrowly. It requires “firearm blocking technology” that does not meaningfully exist: no ASTM standard has been published or announced, and the law itself lets the Department stop checking if none appears by July 1, 2029. Please do not go beyond ASTM with definitions or requirements of the Department's own. Any eventual rule would burden lawful California buyers with locked-down machines while leaving the millions of printers already in circulation untouched.",
             state: "I am writing to ask you to oppose printer blocking-technology mandates like California's AB 2047 and Washington's HB 2321. These bills mandate detection technology that does not meaningfully exist, would lock lawful users out of open-source firmware, and would do nothing about the millions of printers already in circulation.",
             congress: "I am writing to ask you to oppose any federal mandate for “firearm blocking technology” in consumer 3D printers. The technology these proposals imagine does not meaningfully exist, and state-level versions (California AB 2047, New York's 2026 law) already concede this through feasibility off-ramps and sunset clauses."
         },
         concerns: {
-            newsom: "Whatever your decision on AB 2047, I ask that its implementation protect three things that matter enormously to lawful users: open-source printer firmware (which file-screening mandates would effectively outlaw, since a screen you can recompile away is no screen at all), printers that operate offline (most hobbyist machines are never connected to the internet, so any screening must work without cloud checks), and legitimate prop, cosplay, and replica printing (which shape-detection algorithms consistently misidentify).",
+            cadoj: "Whatever the Department eventually writes under AB 2047, I ask that it protect three things that matter enormously to lawful users: open-source printer firmware (which file-screening mandates would effectively outlaw, since a screen you can recompile away is no screen at all), printers that operate offline (most hobbyist machines are never connected to the internet, so any screening must work without cloud checks), and legitimate prop, cosplay, and replica printing (which shape-detection algorithms consistently misidentify). I also ask the Department to use its authority to add exceptions: extend the entertainment-props exemption to cosplay, costuming, theater, schools, airsoft and replica builders; confirm that free gifts and private used-printer sales between individuals are outside the mandate; and require an appeal path for wrongly blocked prints.",
             state: "As printer legislation reaches our state, I ask you to weigh three practical realities of hobbyist 3D printing: most of our machines run community-maintained open-source firmware; most are never connected to the internet; and a large share of what hobbyists lawfully print — props, replicas, model parts — is exactly what shape-detection algorithms misidentify. Laws that regulate conduct (unlicensed manufacture of firearms) fit these realities far better than laws that regulate printer hardware.",
             congress: "If federal 3D printing legislation is considered, I ask you to weigh three practical realities: most hobbyist machines run community-maintained open-source firmware; most are never connected to the internet; and shape-detection algorithms consistently misidentify lawful prints such as props and replicas. Conduct-based laws fit these realities far better than hardware mandates."
         },
         questions: {
-            newsom: "AB 2047 is on your desk, and I would appreciate understanding your office's view on three questions before the September deadline: How will “3D printer” be defined in implementing regulations — does it reach hobbyist machines assembled from off-the-shelf components? Will the eventual sale restriction apply to private used-printer sales? And what happens to open-source firmware on compliant machines?",
+            cadoj: "AB 2047 is now law, and I would appreciate understanding the Department's view on three questions before any rulemaking begins: How will “3D printer” be defined — does it reach kits and hobbyist machines assembled from off-the-shelf components? Will the eventual sale restriction apply to private used-printer sales between individuals? And what happens to open-source firmware on compliant machines?",
             state: "I would appreciate understanding your position on 3D printer legislation, and specifically: whether you would support hardware mandates (the California/New York model) or conduct-based laws (the Washington/Colorado model); how hobbyist machines built from off-the-shelf components would be treated; and how open-source printer firmware would be protected.",
             congress: "I would appreciate understanding your position on 3D printing legislation, and specifically whether you would support hardware mandates on printers, versus enforcement of existing law — the Undetectable Firearms Act and the licensing requirements that already govern firearm manufacture regardless of method."
         },
@@ -323,10 +323,15 @@
 
     // ── Take Action: link lists ──────────────────────────────────
     document.getElementById("action-links").innerHTML = [
-        ["Governor Newsom's contact form (AB 2047 is his call now)", "https://www.gov.ca.gov/contact/"],
+        ["California Attorney General / DOJ contact form (AB 2047 rules)", "https://oag.ca.gov/contact"],
         ["Find your state legislators — OpenStates", "https://openstates.org/find_your_legislator/"],
         ["Find your US House representative", "https://www.house.gov/representatives/find-your-representative"],
         ["Find your US senators", "https://www.senate.gov/senators/senators-contact.htm"]
+    ].map(([l, u]) => linkRow(l, u)).join("");
+
+    document.getElementById("early-links").innerHTML = [
+        ["ASTM Committee F42 on Additive Manufacturing Technologies", "https://www.astm.org/membership-participation/technical-committees/committee-f42"],
+        ["Talk it over with the meetup on Discord", "https://discord.gg/pnFyeAZJsk"]
     ].map(([l, u]) => linkRow(l, u)).join("");
 
     document.getElementById("ally-links").innerHTML = [
